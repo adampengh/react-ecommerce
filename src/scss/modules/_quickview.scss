@@ -1,0 +1,141 @@
+.quickview {
+    background: rgba($black, .8);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+
+    &__content {
+        background: $white;
+        box-shadow: 0 0 8px 4px rgba($black, 0.8);
+        display: block;
+        height: 720px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 960px;
+    }
+
+
+    // ==========================================================================
+    // Close Btn
+    // ==========================================================================
+    &__close-btn {
+        align-items: center;
+        background: $white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        transition: all .5s ease;
+        width: 48px;
+        &:hover {
+            background: $iron;
+            svg {
+                fill: $black;
+            }
+        }
+
+        svg {
+            transition: all .5s ease;
+        }
+    }
+
+    // ==========================================================================
+    // Header
+    // ==========================================================================
+    &__header {
+        padding: 16px 24px;
+        h3 {
+            color: $mako;
+            font-size: 18px;
+            font-weight: $font-weight--medium;
+            line-height: 22px;
+            margin: 0;
+        }
+        a {
+            color: $gray;
+            font-size: 12px;
+            line-height: 16px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+
+    // ==========================================================================
+    // Main
+    // ==========================================================================
+    &__main {
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        padding: 16px 24px;
+
+        &-left {
+
+        }
+        &-right {
+
+        }
+    }
+
+
+    &__promotion {
+        color: $red;
+        display: block;
+        font-size: 12px;
+        font-weight: $font-weight--medium;
+        line-height: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__brand {
+        font-size: 16px;
+        font-weight: $font-weight--medium;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: $font-weight--medium;
+        line-height: 20px;
+        margin: 0;
+    }
+
+    &__price {
+        margin-top: 8px;
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+        &--reg {
+            color: $gray;
+        }
+
+        &--sale {
+            color: $red;
+            margin-left: 8px;
+        }
+
+        &--discount {
+            margin-left: 8px;
+            color: $gray-lt;
+        }
+    }
+
+}

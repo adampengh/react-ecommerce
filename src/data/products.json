@@ -1,0 +1,115 @@
+[
+    {
+        "id": 1,
+        "images": [
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/478035f3-8226-4c86-a0af-1e4796f737ce/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+            },
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/895da9ad-7445-42c0-947b-4785cab0b20a/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+            }
+        ],
+        "image": {
+            "badge": "New"
+        },
+        "badge": "Best Seller",
+        "brand": "Nike",
+        "title": "Nike Air Zoom Tempo NEXT%",
+        "price": {
+            "regPrice": 200.00,
+            "salePrice": 179.99
+        },
+        "promotion": "Extra 10% off sale styles with code 10off",
+        "swatches": [
+            "#E96C5D",
+            "#671269",
+            "#5C7A1D",
+            "#43494F",
+            "#007571",
+            "#1D5259"
+        ]
+    },
+    {
+        "id": 2,
+        "images": [
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e595abfa-7e65-4514-9895-be2de74f3e10/air-zoom-pegasus-37-mens-running-shoe-KLvDcj.jpg"
+            },
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/be86c34f-5992-4de3-b5d6-4f3c4aca20ff/air-zoom-pegasus-37-mens-running-shoe-KLvDcj.jpg"
+            }
+        ],
+        "image": {
+            "badge": "New"
+        },
+        "badge": "",
+        "brand": "Nike",
+        "title": "Nike Air Zoom Pegasus 37",
+        "price": {
+            "regPrice": 200.00
+        },
+        "promotion": "",
+        "swatches": [
+            "#1D2229",
+            "#007571",
+            "#43494F",
+            "#5C7A1D",
+            "#671269",
+            "#AA4323"
+        ]
+    },
+    {
+        "id": 3,
+        "images": [
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aaf3ec6-4f6a-405d-89cb-4e54cbbdc384/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg"
+            },
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7490132e-7f51-4156-991b-1e2b51bcb0a8/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg"
+            }
+        ],
+        "badge": "Highly Rated",
+        "brand": "Nike",
+        "title": "Nike React Infinity Run Flyknit",
+        "price": {
+            "regPrice": 200.00,
+            "salePrice": 179.99
+        },
+        "promotion": "Extra 10% off sale styles with code 10off",
+        "swatches": [
+            "#eeeeee",
+            "#671269",
+            "#5C7A1D",
+            "#43494F",
+            "#007571",
+            "#1D5259"
+        ]
+    },
+    {
+        "id": 4,
+        "images": [
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/otzsjf3iyyqdtwi05n8b/zoom-pegasus-turbo-2-mens-running-shoe-GcDSX3.jpg"
+            },
+            {
+                "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/nu4cvkg5hlbgq26vtjph/zoom-pegasus-turbo-2-mens-running-shoe-GcDSX3.jpg"
+            }
+        ],
+        "image": {
+            "badge": "New"
+        },
+        "badge": "",
+        "brand": "Nike",
+        "title": "NNike Zoom Pegasus Turbo 2",
+        "price": {
+            "regPrice": 200.00,
+            "salePrice": 149.99
+        },
+        "promotion": "",
+        "swatches": [
+            "#1D2229",
+            "#007571",
+            "#43494F"
+        ]
+    }
+]

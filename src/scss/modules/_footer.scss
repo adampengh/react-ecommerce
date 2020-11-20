@@ -1,0 +1,11 @@
+.footer {
+    background: $off-white;
+    min-height: 400px;
+    padding: 12px 0;
+
+    &__inner {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+}
