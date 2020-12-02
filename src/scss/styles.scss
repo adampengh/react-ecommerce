@@ -10,11 +10,14 @@
 // Base
 // ==========================================================================
 @import 'base/base';
+@import 'base/buttons';
+@import 'base/dropdown';
 
 
 // ==========================================================================
 // Layout
 // ==========================================================================
+@import 'layout/grid';
 @import 'layout/page';
 
 
@@ -26,7 +29,10 @@
 @import 'modules/breadcrumbs';
 @import 'modules/hero';
 @import 'modules/page-title';
-@import 'modules/product-grid';
 @import 'modules/product-card';
+@import 'modules/product-grid';
+@import 'modules/product-primary';
 @import 'modules/promo-slider';
+@import 'modules/price-group';
 @import 'modules/quickview';
+@import 'modules/slick-slider';

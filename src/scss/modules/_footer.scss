@@ -2,10 +2,35 @@
     background: $off-white;
     min-height: 400px;
     padding: 12px 0;
+    padding-top: 0;
+    margin-top: 128px;
+
+    &__contact {
+        align-items: center;
+        background: #fff;
+        border-bottom: 1px solid $iron;
+        border-top: 1px solid $iron;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 12px;
+        padding-top: 12px;
+        position: relative;
+
+        p {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: $font-weight--normal;
+            line-height: 16px;
+            margin-left: 64px;
+            margin-right: 64px;
+        }
+    }
 
     &__inner {
-        max-width: 1440px;
+        display: block;
         margin: 0 auto;
-        padding: 0 12px;
+        max-width: 1440px;
+        padding: 12px 12px 0;
+        position: relative;
     }
 }

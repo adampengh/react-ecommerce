@@ -3,8 +3,8 @@ const Hero = () => {
         <section className="hero">
             <div className="hero__image">
                 <picture>
-                    <source media="(max-width:767px)" srcset="https://via.placeholder.com/800x600" />
-                    <source media="(min-width:768px)" srcset="https://via.placeholder.com/1600x800" />
+                    <source media="(max-width:767px)" srcSet="https://via.placeholder.com/800x600" />
+                    <source media="(min-width:768px)" srcSet="https://via.placeholder.com/1600x800" />
                     <img src="https://via.placeholder.com/1600x800" alt="" />
                 </picture>
             </div>

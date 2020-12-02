@@ -1,0 +1,261 @@
+{
+    "products": [
+        {
+            "id": "CI9923",
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/478035f3-8226-4c86-a0af-1e4796f737ce/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/895da9ad-7445-42c0-947b-4785cab0b20a/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/de533ee6-62d3-4755-aedf-3bd1982b1e9e/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d83e3f5d-7880-44f4-94e9-2395cc514ab3/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d5b9a87a-6e52-4fda-a9e0-9586ed0ad9fa/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/124991e2-6bc8-4537-852d-da3f167af217/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d9255daf-d912-4ecc-ae0e-ca5788ca524d/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ab414371-a409-4c3c-b49d-014582d97adc/air-zoom-tempo-next-mens-running-shoe-Jp0gJk.jpg"
+                }
+            ],
+            "image": {
+                "badge": "New"
+            },
+            "badge": "Best Seller",
+            "brand": "Nike",
+            "title": "Nike Air Zoom Tempo NEXT%",
+            "price": {
+                "regPrice": 200.00,
+                "salePrice": 169.99
+            },
+            "promotion": "Extra 10% off sale styles with code 10off",
+            "swatches": [
+                "#E96C5D",
+                "#671269",
+                "#5C7A1D",
+                "#43494F",
+                "#007571",
+                "#1D5259"
+            ],
+            "created_at": "2020-11-01 05:56:37 -0400",
+            "published_at": "2020-11-01 05:56:37 -0400",
+            "salesRank": 3
+        },
+        {
+            "id": 2,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e595abfa-7e65-4514-9895-be2de74f3e10/air-zoom-pegasus-37-mens-running-shoe-KLvDcj.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/be86c34f-5992-4de3-b5d6-4f3c4aca20ff/air-zoom-pegasus-37-mens-running-shoe-KLvDcj.jpg"
+                }
+            ],
+            "image": {
+                "badge": "New"
+            },
+            "badge": "",
+            "brand": "Nike",
+            "title": "Nike Air Zoom Pegasus 37",
+            "price": {
+                "regPrice": 200.00
+            },
+            "promotion": "",
+            "swatches": [
+                "#1D2229",
+                "#007571",
+                "#43494F",
+                "#5C7A1D",
+                "#671269",
+                "#AA4323"
+            ],
+            "created_at": "2020-11-01 11:56:37 -0400",
+            "published_at": "2020-11-01 11:56:37 -0400",
+            "salesRank": 30
+        },
+        {
+            "id": 3,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aaf3ec6-4f6a-405d-89cb-4e54cbbdc384/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/7490132e-7f51-4156-991b-1e2b51bcb0a8/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg"
+                }
+            ],
+            "badge": "Highly Rated",
+            "brand": "Nike",
+            "title": "Nike React Infinity Run Flyknit",
+            "price": {
+                "regPrice": 200.00,
+                "salePrice": 179.99
+            },
+            "promotion": "Extra 10% off sale styles with code 10off",
+            "swatches": [
+                "#eeeeee",
+                "#671269",
+                "#5C7A1D",
+                "#43494F",
+                "#007571",
+                "#1D5259"
+            ],
+            "created_at": "2020-11-01 08:56:37 -0400",
+            "published_at": "2020-11-01 08:56:37 -0400",
+            "salesRank": 20
+        },
+        {
+            "id": 4,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/otzsjf3iyyqdtwi05n8b/zoom-pegasus-turbo-2-mens-running-shoe-GcDSX3.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/nu4cvkg5hlbgq26vtjph/zoom-pegasus-turbo-2-mens-running-shoe-GcDSX3.jpg"
+                }
+            ],
+            "image": {
+                "badge": "New"
+            },
+            "badge": "",
+            "brand": "Nike",
+            "title": "Nike Zoom Pegasus Turbo 2",
+            "price": {
+                "regPrice": 200.00,
+                "salePrice": 149.99
+            },
+            "promotion": "",
+            "swatches": [
+                "#1D2229",
+                "#007571",
+                "#43494F"
+            ],
+            "created_at": "2020-11-01 10:56:37 -0400",
+            "published_at": "2020-11-01 10:56:37 -0400",
+            "salesRank": 50
+        },
+        {
+            "id": 5,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/14b1864e-1aa8-494f-b209-30ee494793a4/react-phantom-run-flyknit-2-mens-running-shoe-z8ZSzh.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/d86ada29-5c03-4fca-90b1-4af79732f1fe/react-phantom-run-flyknit-2-mens-running-shoe-z8ZSzh.jpg"
+                }
+            ],
+            "image": {
+                "badge": "New"
+            },
+            "badge": "Best Seller",
+            "brand": "Nike",
+            "title": "Nike React Phantom Run Flyknit 2",
+            "price": {
+                "regPrice": 200.00,
+                "salePrice": 169.99
+            },
+            "promotion": "Extra 10% off sale styles with code 10off",
+            "swatches": [
+                "#E96C5D",
+                "#671269",
+                "#5C7A1D",
+                "#43494F",
+                "#007571",
+                "#1D5259"
+            ],
+            "created_at": "2020-11-01 15:56:37 -0400",
+            "published_at": "2020-11-01 15:56:37 -0400",
+            "salesRank": 234
+        },
+        {
+            "id": 6,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-8c862cf2-4309-4a50-94f0-37cccd66458b/air-zoom-wio-7-mens-running-shoe-810FRg.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/i1-c9d75fc1-9ac9-45b2-9812-8074ced1bd7c/air-zoom-wio-7-mens-running-shoe-810FRg.jpg"
+                }
+            ],
+            "badge": "",
+            "brand": "Nike",
+            "title": "Nike Air Zoom Winflo 7",
+            "price": {
+                "regPrice": 90.00,
+                "salePrice": 74.97
+            },
+            "promotion": "",
+            "swatches": [
+                "#1D2229",
+                "#007571",
+                "#43494F",
+                "#AA4323"
+            ],
+            "created_at": "2020-11-01 11:56:37 -0400",
+            "published_at": "2020-11-01 11:56:37 -0400",
+            "salesRank": 30
+        },
+        {
+            "id": 7,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i1-dcb8da19-e944-45c6-adcd-f07057920241/react-miler-mens-running-shoe-DgF6nr.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/i1-1b38e70a-0d14-48f6-b865-d8ce43a7c4bf/react-miler-mens-running-shoe-DgF6nr.jpg"
+                }
+            ],
+            "brand": "Nike",
+            "title": "Nike React Miler",
+            "price": {
+                "regPrice": 130.00,
+                "salePrice": 80.97
+            },
+            "promotion": "Extra 10% off sale styles with code 10off",
+            "swatches": [
+                "#43494F",
+                "#007571",
+                "#1D5259"
+            ],
+            "created_at": "2020-11-01 08:56:37 -0400",
+            "published_at": "2020-11-01 08:56:37 -0400",
+            "salesRank": 203
+        },
+        {
+            "id": 8,
+            "images": [
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/zi28axtkaqal6sr6kyum/flex-experience-rn-8-mens-running-shoe-HgjM1T.jpg"
+                },
+                {
+                    "src": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/t7wwoad1vk01dcqkkn9u/flex-experience-rn-8-mens-running-shoe-HgjM1T.jpg"
+                }
+            ],
+            "badge": "",
+            "brand": "Nike",
+            "title": "Nike Flex Experience RN 8",
+            "price": {
+                "regPrice": 65.00,
+                "salePrice": 33.97
+            },
+            "promotion": "",
+            "swatches": [
+                "#1D2229",
+                "#007571",
+                "#43494F"
+            ],
+            "created_at": "2020-11-01 10:56:37 -0400",
+            "published_at": "2020-11-01 10:56:37 -0400",
+            "salesRank": 502
+        }
+    ]
+}

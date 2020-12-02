@@ -17,6 +17,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 a {
@@ -29,11 +30,16 @@ svg {
 }
 
 div {
-    line-height: 0;
+    display: block;
 }
 
 p {
     margin: 0;
     font-size: 14px;
     line-height: 18px;;
+}
+
+main {
+    display: block;
+    position: relative;
 }

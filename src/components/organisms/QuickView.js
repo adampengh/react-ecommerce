@@ -1,5 +1,8 @@
-import { ReactComponent as CloseIcon } from '../assets/icons/close.svg';
-import Currency from '../modules/currency';
+import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
+
+import Button from './../atoms/Button';
+import PriceGroup from './../molecules/PriceGroup';
+import Swatches from './../molecules/Swatches';
 
 const QuickView = (props) => {
     const show = props.show;
@@ -24,14 +27,11 @@ const QuickView = (props) => {
                                 <span className="quickview__promotion uppercase">{product.promotion}</span>
                                 <p className="quickview__brand uppercase">{product.brand}</p>
                                 <h3 className="quickview__title">{product.title}</h3>
-                                <div className="quickview__price">
-                                    {product.price.salePrice &&
-                                        <span className="quickview__price--discount">({Currency.percentDiscount(product.price.regPrice, product.price.salePrice)} off)</span>
-                                    }
-                                    {product.price.salePrice &&
-                                        <span className="quickview__price--sale fw-bold">{Currency.formatCurrency(product.price.salePrice)}</span>
-                                    }
-                                    <span className={`quickview__price--reg ${product.price.salePrice ? 'line-through' : 'fw-bold'}`}>{Currency.formatCurrency(product.price.regPrice)}</span>
+                                <PriceGroup prefix={"quickview"} product={product} />
+                                <Swatches prefix={"quickview"} swatches={product.swatches} />
+                                <div className="quickview__actions">
+                                    <Button buttonClass="primary">Add to Cart</Button>
+                                    <Button buttonClass="primary-outline">Add to Wishlist</Button>
                                 </div>
                             </div>
                         </div>

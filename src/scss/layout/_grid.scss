@@ -1,0 +1,94 @@
+.layout {
+    padding-bottom: 48px;
+    padding-top: 48px;
+    .container {
+        background: rgba(#FF3300, .1);
+        border: 1px solid rgba(#FF3300, .3);
+    }
+    .row {
+        background: rgba(#FF0000, .1);
+        border: 1px solid rgba(#FF0000, .3);
+    }
+    [class*="col"] {
+        background: rgba(#563D7C, .15);
+        border: 1px solid rgba(#563D7C, .2);
+    }
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    max-width: 100%;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: $breakpoint-sm) {
+        max-width: 576px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        max-width: 720px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+        max-width: 960px;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+        max-width: 1440px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    [class*="col"] {
+        display: block;
+        padding: 12px;
+        flex-basis: calc(100% / 2);
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .col {
+        @for $i from 1 through 2 {
+            &-#{$i} {
+                flex-basis: calc(100% / #{$i});
+            }
+        }
+
+        @media screen and (min-width: $breakpoint-sm) {
+            @for $i from 1 through 4 {
+                &-sm-#{$i} {
+                    flex-basis: calc(100% / #{$i});
+                }
+            }
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            @for $i from 1 through 8 {
+                &-md-#{$i} {
+                    flex-basis: calc(100% / #{$i});
+                }
+            }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            @for $i from 1 through 8 {
+                &-lg-#{$i} {
+                    flex-basis: calc(100% / #{$i});
+                }
+            }
+        }
+        @media screen and (min-width: $breakpoint-xl) {
+            @for $i from 1 through 12 {
+                &-xl-#{$i} {
+                    flex-basis: calc(100% / #{$i});
+                }
+            }
+        }
+    }
+}

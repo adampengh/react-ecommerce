@@ -1,6 +1,5 @@
 .product-grid {
 
-
     &__refinements {
         align-items: center;
         background: $white;
@@ -15,10 +14,53 @@
 
 
         &-filters {
+            align-items: center;
             // background: rgba(0, 0, 255, 0.1);
+            border: none;
+            display: flex;
             flex-basis: 25%;
-            padding-left: 12px;
-            padding-right: 12px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            font-size: 14px;
+            height: 40px;
+            line-height: 18px;
+            padding: 8px;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.5s ease;
+            width: 100%;
+            &.show {
+                background: $mako;
+                .dropdown__label {
+                    color: $white;
+                    svg {
+                        fill: $white;
+                        transform: rotateZ(180deg);
+                    }
+                }
+            }
+
+            &__label {
+                align-content: center;
+                align-items: center;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                // background: rgba(0, 0, 255, 0.1);
+            }
+
+            &__icon {
+                display: flex;
+                height: 24px;
+                // background: rgba(0, 255, 0, 0.1);
+                width: 24px;
+                svg {
+                    height: 24px;
+                    transition: all 0.5s ease;
+                    width: 24px;
+                }
+            }
         }
 
 
@@ -47,68 +89,51 @@
     }
 
 
-    .button-group {
-        align-items: center;
+
+    &__inner {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        &:not(:last-child) {
-            margin-right: 16px;
-        }
-
-        span {
-            font-size: 12px;
-            line-height: 16px;
-            margin-right: 8px;
-            text-transform: uppercase;
-        }
-
-        button {
-            background: E8E8E8;
-            border: none;
-            border-radius: 0;
-            color: $mako;
-            cursor: pointer;
-            font-family: $font-primary;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 16px;
-            margin: 0;
-            padding: 4px 8px;
-            text-transform: uppercase;
-
-            &:first-of-type {
-                border-bottom-left-radius: 4px;
-                border-top-left-radius: 4px;
+        margin-left: -12px;
+        margin-right: -12px;
+        align-items: flex-start;
+        &[data-show-filters="true"] {
+            // margin-left: -12px;
+            // margin-right: -12px;
+            .product-grid__aside {
+                flex-basis: 25%;
+                width: 25%;
+                margin-top: -12px;
+                z-index: 999;
+                padding: 24px 12px 12px;
+                border: 1px solid $mako;
+                border-top: none;
+                min-height: 600px;
             }
-            &:last-of-type {
-                border-bottom-right-radius: 4px;
-                border-top-right-radius: 4px;
-            }
-            &.active {
-                background: $mako;
-                color: $white;
-            }
-            &:focus {
-                background: $mako;
-                border-color: #545b62;
-                box-shadow: 0 0 0 2px rgba(130, 138, 145, .4);
-                color: $white;
-                outline: none;
+            .product-grid__main {
+                flex-basis: 75%;
+                margin: 0;
+                width: 75%;
             }
         }
     }
 
+    &__aside {
+        // background: rgba(blue, 0.1);
+        transition: all 0.3s ease;
+        width: 0;
+        overflow: hidden;
+    }
 
 
-    &__inner {
+    &__main {
+        // background: rgba(red, 0.1);
         display: grid;
+        flex-basis: 100%;
         grid-gap: 0;
         grid-template-columns: repeat(2, 1fr);
-        margin-left: -12px;
-        margin-right: -12px;
-        padding-bottom: 32px;
-        padding-top: 32px;
+        // margin-left: -12px;
+        // margin-right: -12px;
+        transition: all 0.3s ease;
+        width: 100%;
         @media screen and (min-width: 768px) {
             &[data-grid-view="2"] {
                 grid-template-columns: repeat(2, 1fr);

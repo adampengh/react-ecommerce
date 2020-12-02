@@ -62,8 +62,10 @@
         }
         a {
             color: $gray;
+            display: block;
             font-size: 12px;
             line-height: 16px;
+            margin-top: 4px;
             &:hover {
                 text-decoration: underline;
             }
@@ -114,14 +116,14 @@
     }
 
     &__price {
-        margin-top: 8px;
         display: block;
-        font-size: 14px;
-        line-height: 16px;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
+        font-size: 14px;
         justify-content: flex-end;
+        line-height: 16px;
+        margin-top: 8px;
 
         &--reg {
             color: $gray;
@@ -133,9 +135,63 @@
         }
 
         &--discount {
-            margin-left: 8px;
             color: $gray-lt;
+            margin-left: 8px;
         }
+    }
+
+    // --------------------------------------------------------------------------
+    // Swatches
+    // --------------------------------------------------------------------------
+    &__swatches {
+        display: block;
+        margin-bottom: 32px;
+        margin-top: 32px;
+        position: relative;
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            list-style-type: none;
+            margin: 0;
+            margin-top: 12px;
+            padding: 0;
+            li {
+                align-items: center;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 100%;
+                cursor: pointer;
+                display: flex;
+                height: 32px;
+                justify-content: center;
+                transition: border 0.1s ease;
+                width: 32px;
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+                &:hover {
+                    border: 1px solid #333;
+                }
+
+                &.active {
+                    border: 1px solid #333;
+                }
+
+                span {
+                    border-radius: 100%;
+                    display: block;
+                    height: 26px;
+                    width: 26px;
+                }
+            }
+        }
+    }
+
+
+    &__actions {
+        margin-top: 16px;
     }
 
 }

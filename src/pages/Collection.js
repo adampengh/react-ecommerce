@@ -1,19 +1,52 @@
-import Breadcrumbs from './../components/Breadcrumbs';
-import PageTitle from './../components/PageTitle';
-import ProductGrid from './../components/ProductGrid';
-const products = require('../data/products.json');
+import {useState, useEffect} from 'react';
+
+import PageTitle from './../components/atoms/PageTitle';
+import Breadcrumbs from './../components/molecules/Breadcrumbs';
+import ProductGrid from './../components/organisms/ProductGrid';
+// const products = require('../data/products.json');
 
 const Collection = (props) => {
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [products, setProducts] = useState([]);
+
     const topLevel = props.match.params.topLevel;
     const category = props.match.params.category;
 
-    return (
-        <main className="page-container">
-            <Breadcrumbs topLevel={topLevel} category={category}></Breadcrumbs>
-            <PageTitle title={category}></PageTitle>
-            <ProductGrid products={products}></ProductGrid>
-        </main>
-    )
+    // Note: the empty deps array [] means
+    // this useEffect will run once
+    // similar to componentDidMount()
+    useEffect(() => {
+        fetch("http://localhost:4000/products")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setProducts(result);
+                    setIsLoaded(true);
+                },
+                // Note: it's important to handle errors here
+                // instead of a catch() block so that we don't swallow
+                // exceptions from actual bugs in components.
+                (error) => {
+                    setError(error);
+                    setIsLoaded(true);
+                }
+            )
+    }, [])
+
+    if (error) {
+        return <div>Error: {error.message}</div>
+    } else if (!isLoaded) {
+        return <div>Loading...</div>
+    } else {
+        return (
+            <main className="page-container">
+                <Breadcrumbs topLevel={topLevel} category={category}></Breadcrumbs>
+                <PageTitle title={category}></PageTitle>
+                <ProductGrid products={products}></ProductGrid>
+            </main>
+        )
+    }
 };
 
 export default Collection;

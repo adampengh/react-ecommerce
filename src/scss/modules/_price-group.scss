@@ -1,0 +1,29 @@
+// --------------------------------------------------------------------------
+// Price
+// --------------------------------------------------------------------------
+.product {
+    &__price {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        font-size: 12px;
+        font-weight: $font-weight--medium;
+        justify-content: flex-end;
+        line-height: 16px;
+
+
+        &--reg {
+            color: $gray;
+        }
+
+        &--sale {
+            color: $red;
+            margin-left: 8px;
+        }
+
+        &--discount {
+            margin-left: 8px;
+            color: $gray-lt;
+        }
+    }
+}
