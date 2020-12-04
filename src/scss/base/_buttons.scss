@@ -6,22 +6,29 @@
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
-    font-weight: $font-weight--medium;
+    font-weight: $font-weight--bold;
     letter-spacing: 1px;
     line-height: 18px;
+    margin-bottom: 12px;
+    margin-right: 12px;
     padding: 12px 36px;
     text-transform: uppercase;
-
-    & + .btn {
-        margin-left: 12px;
-    }
+    transition: all 0.3s ease;
 
     &-primary {
         background-color: $color-primary;
+        &:hover {
+            background-color: darken($color-primary, 10);
+        }
         &-outline {
             background-color: $white;
             border: 1px solid $color-primary;
             color: $color-primary;
+            &:hover {
+                background-color: darken($color-primary, 10);
+                border-color: darken($color-primary, 10);
+                color: $white;
+            }
         }
     }
 

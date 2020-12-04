@@ -1,28 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
+
+// Atoms
+import PageTitle from '../atoms/PageTitle';
 
 // Molecules
-import Breadcrumbs from './../components/molecules/Breadcrumbs';
+import Breadcrumbs from '../molecules/Breadcrumbs';
 
-// Templates
-import ProductPrimary from './../components/templates/ProductPrimary';
+// Organisms
+import ProductGrid from '../organisms/ProductGrid';
+// const products = require('../data/products.json');
 
-
-const Product = (props) => {
+const Collection = (props) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    const productId = props.match.params.productId;
+    const topLevel = props.match.params.topLevel;
+    const category = props.match.params.category;
 
     // Note: the empty deps array [] means
     // this useEffect will run once
     // similar to componentDidMount()
     useEffect(() => {
-        fetch(`http://localhost:4000/products/${productId}`)
+        fetch("http://localhost:4000/products")
             .then(res => res.json())
             .then(
                 (result) => {
-                    setProduct(result);
+                    setProducts(result);
                     setIsLoaded(true);
                 },
                 // Note: it's important to handle errors here
@@ -33,8 +37,7 @@ const Product = (props) => {
                     setIsLoaded(true);
                 }
             )
-    }, [productId]);
-
+    }, [])
 
     if (error) {
         return <div>Error: {error.message}</div>
@@ -42,16 +45,15 @@ const Product = (props) => {
         return <div>Loading...</div>
     } else {
         return (
-            <div>
-                <div className="container">
-                    <Breadcrumbs category={"Product"} />
-                </div>
-                <ProductPrimary product={product} productGallery="slider"></ProductPrimary>
-            </div>
+            <main className="page-container">
+                <Breadcrumbs topLevel={topLevel} category={category}></Breadcrumbs>
+                <PageTitle title={category}></PageTitle>
+                <ProductGrid products={products}></ProductGrid>
+            </main>
         )
     }
 };
 
-export default Product;
+export default Collection;
 
 

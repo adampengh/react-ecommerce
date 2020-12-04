@@ -3,6 +3,13 @@
 // ==========================================================================
 // Colors
 // ==========================================================================
+
+// Brand Colors
+$brand-primary:     #2C3D63;
+$brand-secondary:   #ADDCCA;
+$brand-highlight:   #FF6F5E;
+
+// Neutrals
 $black:             #333333;
 $mako:              #43494F;
 $gray:              #666666;
@@ -12,11 +19,10 @@ $mercury:           #E8E8E8;
 $off-white:         #F0F1F2;
 $white:             #ffffff;
 
-
 $red:               #ED565D;
-$color-primary:     #2C3D63;
-$color-secondary:   #ADDCCA;
-$color-highlght:    #FF6F5E;
+$color-primary:     $mako;
+$color-secondary:   $brand-secondary;
+$color-highlght:    $brand-highlight;
 
 
 // ==========================================================================

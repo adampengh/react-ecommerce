@@ -1,0 +1,48 @@
+.icon {
+    fill: $mako;
+    width: 48px;
+    height: 48px;
+
+    // --------------------------------------------------------------------------
+    // Sizing
+    // --------------------------------------------------------------------------
+    &-sm {
+        width: 16px;
+        height: 16px
+    }
+    &-md {
+        width: 24px;
+        height: 24px;
+    }
+    &-lg {
+        width: 36px;
+        height: 36px;
+    }
+
+
+
+    &.star {
+        &-empty {
+            fill: transparent;
+            stroke: $mako;
+            stroke-width: 2;
+        }
+        &-half {
+            path {
+                &:nth-child(1) {
+                    fill: transparent;
+                    stroke: $mako;
+                    stroke-width: 2;
+                }
+                &:nth-child(2) {
+                    fill: $mako;
+                }
+            }
+        }
+        &-full {
+            fill: $mako;
+            stroke: $mako;
+            stroke-width: 2;
+        }
+    }
+}

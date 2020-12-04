@@ -8,10 +8,10 @@ import {
 import './scss/styles.scss';
 
 // Pages
-import Homepage from './pages/Homepage';
-import Collection from './pages/Collection';
-import Product from './pages/Product';
-import Layout from './pages/Layout';
+import Homepage from './components/pages/Homepage';
+import Collection from './components/pages/Collection';
+import Product from './components/pages/Product';
+import Layout from './components/pages/Layout';
 
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';

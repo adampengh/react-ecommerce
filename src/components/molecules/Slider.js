@@ -48,6 +48,7 @@ export default class SlickSlider extends React.Component {
             infinite: this.props.infinite || true,
             nextArrow: this.props.nextArrow || <ButtonNext />,
             prevArrow: this.props.prevArrow || <ButtonPrev />,
+            responsive: this.props.responsive || [],
             speed: this.props.speed || 500,
             slidesToShow: this.props.slidesToShow || 1,
             slidesToScroll: this.props.slidesToScroll || 1,

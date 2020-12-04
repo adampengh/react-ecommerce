@@ -1,8 +1,14 @@
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 
+// Atoms
 import Button from './../atoms/Button';
+
+// Molecules
 import PriceGroup from './../molecules/PriceGroup';
 import Swatches from './../molecules/Swatches';
+
+// Organisms
+import ProductDetailsSlider from './../organisms/ProductDetailSlider';
 
 const QuickView = (props) => {
     const show = props.show;
@@ -21,7 +27,8 @@ const QuickView = (props) => {
                         </div>
                         <div className="quickview__main">
                             <div className="quickview__main-left">
-                                <img src={product.images[0].src} alt={product.title} />
+                                <ProductDetailsSlider product={product} prefix={"quickview"} />
+                                {/* <img src={product.images[0].src} alt={product.title} /> */}
                             </div>
                             <div className="quickview__main-right">
                                 <span className="quickview__promotion uppercase">{product.promotion}</span>
