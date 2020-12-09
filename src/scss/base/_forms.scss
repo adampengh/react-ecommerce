@@ -1,0 +1,56 @@
+form {
+    padding-top: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.input-field {
+    border: 1px solid $gray-lt;
+    border-radius: 0;
+    display: block;
+    max-width: 480px;
+    min-width: 320px;
+    padding: 12px 8px;
+    position: relative;
+
+    & + label {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+    }
+
+    // Labelled
+    &--labelled + label {
+        left: 0;
+        top: -12px;
+        font-size: 12px;
+    }
+
+    &[required] {
+        & + label {
+            &::after {
+                color: $red;
+                content: "*";
+                display: inline-block;
+                margin-left: 2px;
+                position: relative;
+            }
+        }
+    }
+}
+
+label {
+    font-size: 14px;
+    font-weight: $font-weight--bold;
+    margin-bottom: 4px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.5s cubic-bezier(0, 0, 0.2, 1)
+}

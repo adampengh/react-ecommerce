@@ -1,20 +1,10 @@
 
-// Molecules
-import Hero from '../molecules/Hero';
-
-// Organisms
-import ProductRecommendations from '../organisms/ProductRecommendations';
+// Templates
+import HomepageTemplate from '../templates/Homepage';
 
 const Homepage = () => {
     return (
-        <main>
-            <Hero />
-            <div className="container">
-                <ProductRecommendations
-                    params={`_sort=salesRank&_order=asc`}
-                    title="Best Sellers" />
-            </div>
-        </main>
+        <HomepageTemplate />
     )
 };
 

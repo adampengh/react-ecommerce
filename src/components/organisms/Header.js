@@ -1,119 +1,146 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import {ReactComponent as ShoppingBagIcon} from '../../assets/icons/shopping-bag.svg';
-import {ReactComponent as UserIcon} from '../../assets/icons/user.svg';
-import {ReactComponent as LocationIcon} from '../../assets/icons/location.svg';
+import { ReactComponent as ShoppingBagIcon } from '../../assets/icons/shopping-bag.svg';
+import { ReactComponent as UserIcon } from '../../assets/icons/user.svg';
+import { ReactComponent as LocationIcon } from '../../assets/icons/location.svg';
+import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 
-const Header = (props) => {
-    const [menuVisible, setMenuVisible] = useState('false');
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            mainMenu: [],
+            menuVisible: false,
+            menuStatus: false
+        }
+    }
 
-    const handleMenuClick = (event, menu) => {
+    componentDidMount() {
+        if (!this.state.mainMenu.length) {
+            fetch(`http://localhost:4000/mainMenu`)
+                .then(res => res.json())
+                .then(result => {
+                    this.setState({
+                        mainMenu: result
+                    })
+                });
+        }
+    }
+
+
+    handleMenuClick = (event, menu) => {
         event.preventDefault();
 
         const megaMenu = event.target.nextElementSibling;
         if (megaMenu.classList.contains('show')) {
-            setMenuVisible('menu');
+            this.setState({
+                menuVisible: 'menu'
+            });
         } else {
-            setMenuVisible(menu);
+            this.setState({
+                menuVisible: menu
+            });
         }
 
         const megaMenus = document.querySelectorAll('header__mega-menu');
         megaMenus.forEach(menu => {
             if (menu.classList.contains('show') && menu !== megaMenu) {
-                setMenuVisible('');
+                this.setState({
+                    menuVisible: ''
+                });
             }
         });
     };
 
-    return(
-        <header className={props.prefix}>
-            <div className={`${props.prefix}__inner`}>
-                <a className={`${props.prefix}__logo`} href="/">Brand Name</a>
+    handleMenuStatus() {
+        this.setState({
+            menuStatus: !this.state.menuStatus
+        });
+    }
 
-                <div className={`${props.prefix}__primary`}>
-                    <nav className={`${props.prefix}__nav`}>
-                        <ul className={`${props.prefix}__nav-list`}>
-                            <li className={`${props.prefix}__nav-item`}>
-                                <a href="/collections/new" data-menu="new">New</a>
-                            </li>
-                            <li className={`${props.prefix}__nav-item`}>
-                                <a href="/collections/women" data-menu="women" onClick={(event) => handleMenuClick(event, 'women')}>Women</a>
-                                <div className={`header__mega-menu ${menuVisible === 'women' ? 'show' : ''}`} data-menu="women">
-                                    <div className="header__mega-menu-inner">
-                                        <ul>
-                                            <h3>Women</h3>
-                                            <li><a href="/collections/women/new-arrivals">New Arrivals</a></li>
-                                        </ul>
-                                        <ul>
-                                            <h3>Clothing</h3>
-                                            <li><a href="/collections/women/all">All Clothing</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className={`${props.prefix}__nav-item`}>
-                                <a href="/collections/men" data-menu="men" onClick={(event) => handleMenuClick(event, 'men')}>Men</a>
-                                <div className={`header__mega-menu ${menuVisible === 'men' ? 'show' : ''}`} data-menu="men">
-                                    <div className="header__mega-menu-inner">
-                                        <ul>
-                                            <h3>Men</h3>
-                                            <li><a href="/collections/men/new-arrivals">New Arrivals</a></li>
-                                            <li><a href="/collections/men/best-sellers">Best Sellers</a></li>
-                                            <li><a href="/collections/men/top-rated">Top Rated</a></li>
-                                        </ul>
-                                        <ul>
-                                            <h3>Clothing</h3>
-                                            <li><a href="/collections/men/all">All Clothing</a></li>
-                                            <li><a href="/collections/men/shirts">Shirts</a></li>
-                                            <li><a href="/collections/men/dress-shirts">Dress Shirts</a></li>
-                                            <li><a href="/collections/men/pants-chinos">Pants & Chinos</a></li>
-                                        </ul>
-                                        <ul>
-                                            <h3>Shoes</h3>
-                                            <li><a href="/collections/men/shoes">All Shoes</a></li>
-                                        </ul>
-                                        <ul>
-                                            <h3>Accessories</h3>
-                                            <li><a href="/collections/men/all">All Clothing</a></li>
-                                        </ul>
-                                        <div className="header__mega-menu-promos">
-                                            <h3>Summer Trends</h3>
-                                            <div>
-                                                <a href="/collections/men/shirts">
-                                                    <img src="https://via.placeholder.com/300x400" alt="" />
-                                                </a>
-                                                <a href="/collections/men/shirts">
-                                                    <img src="https://via.placeholder.com/300x400" alt="" />
-                                                </a>
+    render() {
+        return (
+            <header className={this.props.prefix}>
+                <div className={`${this.props.prefix}__inner`}>
+                    {/* Header - Logo */}
+                    <a className={`${this.props.prefix}__logo`} href="/">Brand Name</a>
+
+                    {/* Header - Primary */}
+                    <div className={`${this.props.prefix}__primary`}>
+                        <div className={`${this.props.prefix}__toggle`} data-menu-open={this.state.menuStatus} onClick={() => this.handleMenuStatus}>
+                            <MenuIcon />
+                        </div>
+                        <nav className={`${this.props.prefix}__nav`} data-menu-open={this.state.menuStatus}>
+                            <ul className={`${this.props.prefix}__nav-list`}>
+                                {this.state.mainMenu.map((menuItem, index) =>
+                                    <li className={`${this.props.prefix}__nav-item`} key={index}>
+                                        <Link
+                                            to={menuItem.link}
+                                            data-menu={menuItem.category}
+                                            onClick={menuItem.subMenu ? (event) => this.handleMenuClick(event, menuItem.category) : undefined}>
+                                            {menuItem.category}
+                                        </Link>
+                                        {menuItem.subMenu &&
+                                            <div className={`header__mega-menu ${this.state.menuVisible === menuItem.category ? 'show' : ''}`} data-menu={menuItem.category}>
+                                                <div className="header__mega-menu-inner">
+                                                    {menuItem.subMenu.menus.map((menu, index) =>
+                                                        <ul key={index}>
+                                                            <h3>{menu.category}</h3>
+                                                            {menu.links.map((link, index) =>
+                                                                <li key={index}><a href={link.link}>{link.category}</a></li>
+                                                            )}
+                                                        </ul>
+                                                    )}
+                                                    {menuItem.subMenu.promos &&
+                                                        <div className="header__mega-menu-promos">
+                                                            <h3>{menuItem.subMenu.promos.title}</h3>
+                                                            <div>
+                                                                {menuItem.subMenu.promos.images.map((image, index) =>
+                                                                    <Link to={image.link} key={index}>
+                                                                        <img src={image.image} alt="" />
+                                                                    </Link>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className={`${props.prefix}__nav-item`}><a href="/collections/kids">Kids</a></li>
-                            <li className={`${props.prefix}__nav-item`}><a href="/collections/brands">Brands</a></li>
-                            <li className={`${props.prefix}__nav-item`}><a href="/collections/sale">Sale</a></li>
-                            <li className={`${props.prefix}__nav-item`}><a href="/collections/factory">Factory</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                                        }
+                                    </li>
+                                )}
+                            </ul>
+                        </nav>
+                    </div>
 
-                <div className={`${props.prefix}__secondary`}>
-                    <div className={`${props.prefix}__stores`}>
-                        <LocationIcon/>
-                        <span>Stores</span>
-                    </div>
-                    <div className={`${props.prefix}__account`}>
-                        <UserIcon/>
-                        <span>Sign In</span>
-                    </div>
-                    <div className={`${props.prefix}__cart`}>
-                        <ShoppingBagIcon/>
+                    {/* Header - Secondary */}
+                    <div className={`${this.props.prefix}__secondary`}>
+                        <a href="/stores" className={`${this.props.prefix}__stores`}>
+                            <LocationIcon />
+                            <span>Stores</span>
+                        </a>
+                        <div className={`${this.props.prefix}__account`}>
+                            {this.props.loggedIn
+                                ?
+                                <a href="/account/logout">
+                                    <UserIcon />
+                                    <span>Sign Out</span>
+                                </a>
+                                :
+                                <a href="/account/login">
+                                    <UserIcon />
+                                    <span>Sign In</span>
+                                </a>
+                            }
+                        </div>
+                        <div className={`${this.props.prefix}__cart`}>
+                            <a href="/cart">
+                                <ShoppingBagIcon />
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-    )
+            </header>
+        )
+    }
 };
-
-export default Header;

@@ -3,9 +3,9 @@ const Hero = () => {
         <section className="hero">
             <div className="hero__image">
                 <picture>
-                    <source media="(max-width:767px)" srcSet="https://via.placeholder.com/800x600" />
-                    <source media="(min-width:768px)" srcSet="https://via.placeholder.com/1600x800" />
-                    <img src="https://via.placeholder.com/1600x800" alt="" />
+                    <source media="(max-width:767px)" srcSet="/assets/img/placeholder-image-4x3.jpg" />
+                    <source media="(min-width:768px)" srcSet="/assets/img/placeholder-image-16x9.jpg" />
+                    <img src="/assets/img/placeholder-image-16x9.jpg" alt="" />
                 </picture>
             </div>
 
