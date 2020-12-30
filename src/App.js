@@ -13,10 +13,12 @@ import Cart from './components/pages/Cart';
 import Collection from './components/pages/Collection';
 import Homepage from './components/pages/Homepage';
 import Login from './components/pages/account/Login';
+import NotFound from './components/pages/NotFound';
 import Product from './components/pages/Product';
 import Stores from './components/pages/Stores';
 
 import Layout from './components/pages/Layout';
+import Styleguide from './components/pages/Styleguide';
 
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
@@ -49,6 +51,8 @@ class App extends React.Component {
                         <Route path="/account/login" component={Login} />
                         <Route path="/stores" component={Stores} />
                         <Route path="/layout" component={Layout} />
+                        <Route path="/styleguide" component={Styleguide} />
+                        <Route component={NotFound} />
                     </Switch>
                     <Footer />
                 </div>

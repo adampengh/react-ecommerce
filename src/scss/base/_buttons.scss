@@ -1,3 +1,5 @@
+@import '../mixins/button.scss';
+
 .btn {
     background: $mako;
     border: 1px solid transparent;
@@ -15,21 +17,11 @@
     text-transform: uppercase;
     transition: all 0.3s ease;
 
+    &-default {
+        @include button($mako, $mako, $white);
+    }
     &-primary {
-        background-color: $color-primary;
-        &:hover {
-            background-color: darken($color-primary, 10);
-        }
-        &-outline {
-            background-color: $white;
-            border: 1px solid $color-primary;
-            color: $color-primary;
-            &:hover {
-                background-color: darken($color-primary, 10);
-                border-color: darken($color-primary, 10);
-                color: $white;
-            }
-        }
+        @include button($color-primary, $color-primary, $white);
     }
 
     &-secondary {

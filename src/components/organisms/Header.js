@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { ReactComponent as ShoppingBagIcon } from '../../assets/icons/shopping-bag.svg';
 import { ReactComponent as UserIcon } from '../../assets/icons/user.svg';
@@ -75,12 +75,12 @@ export default class Header extends React.Component {
                             <ul className={`${this.props.prefix}__nav-list`}>
                                 {this.state.mainMenu.map((menuItem, index) =>
                                     <li className={`${this.props.prefix}__nav-item`} key={index}>
-                                        <Link
+                                        <NavLink
                                             to={menuItem.link}
                                             data-menu={menuItem.category}
                                             onClick={menuItem.subMenu ? (event) => this.handleMenuClick(event, menuItem.category) : undefined}>
                                             {menuItem.category}
-                                        </Link>
+                                        </NavLink>
                                         {menuItem.subMenu &&
                                             <div className={`header__mega-menu ${this.state.menuVisible === menuItem.category ? 'show' : ''}`} data-menu={menuItem.category}>
                                                 <div className="header__mega-menu-inner">
@@ -97,9 +97,9 @@ export default class Header extends React.Component {
                                                             <h3>{menuItem.subMenu.promos.title}</h3>
                                                             <div>
                                                                 {menuItem.subMenu.promos.images.map((image, index) =>
-                                                                    <Link to={image.link} key={index}>
+                                                                    <NavLink to={image.link} key={index}>
                                                                         <img src={image.image} alt="" />
-                                                                    </Link>
+                                                                    </NavLink>
                                                                 )}
                                                             </div>
                                                         </div>

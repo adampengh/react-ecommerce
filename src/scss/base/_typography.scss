@@ -1,0 +1,73 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight--normal;
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+[class*="serif"] {
+    font-family: $font-secondary;
+    font-weight: $font-weight--normal;
+}
+
+.serif-xxxl {
+    font-size: 48px;
+    line-height: 56px;
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 64px;
+        line-height: 72px;
+    }
+}
+
+.serif-xxl {
+    font-size: 36px;
+    line-height: 44px;
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+.serif-xl {
+    font-size: 32px;
+    line-height: 40px;
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.serif-l {
+    font-size: 24px;
+    line-height: 28px;
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+.serif-m {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.serif-s {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+
+
+[class*="sans"] {
+    font-family: $font-primary;
+}

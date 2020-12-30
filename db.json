@@ -149,11 +149,11 @@
                     "title": "Summer Trends for Women",
                     "images": [
                         {
-                            "image": "https://via.placeholder.com/300x400",
+                            "image": "/assets/img/placeholder-image-3x4.jpg",
                             "link": "/collections/women/shirts"
                         },
                         {
-                            "image": "https://via.placeholder.com/300x400",
+                            "image": "/assets/img/placeholder-image-3x4.jpg",
                             "link": "/collections/women/shirts"
                         }
                     ]
@@ -222,11 +222,11 @@
                     "title": "Summer Trends for Men",
                     "images": [
                         {
-                            "image": "https://via.placeholder.com/300x400",
+                            "image": "/assets/img/placeholder-image-3x4.jpg",
                             "link": "/collections/men/shirts"
                         },
                         {
-                            "image": "https://via.placeholder.com/300x400",
+                            "image": "/assets/img/placeholder-image-3x4.jpg",
                             "link": "/collections/men/shirts"
                         }
                     ]

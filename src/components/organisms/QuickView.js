@@ -37,8 +37,8 @@ const QuickView = (props) => {
                                 <PriceGroup prefix={"quickview"} product={product} />
                                 <Swatches prefix={"quickview"} swatches={product.swatches} />
                                 <div className="quickview__actions">
-                                    <Button buttonClass="primary">Add to Cart</Button>
-                                    <Button buttonClass="primary-outline">Add to Wishlist</Button>
+                                    <Button buttonClass="default">Add to Cart</Button>
+                                    <Button buttonClass="default--outline">Add to Wishlist</Button>
                                 </div>
                             </div>
                         </div>

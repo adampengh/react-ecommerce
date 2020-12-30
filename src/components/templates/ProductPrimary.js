@@ -70,8 +70,8 @@ export default class ProductPrimary extends React.Component {
                         <Swatches swatches={product.swatches} />
 
                         <div className="product-primary__actions">
-                            <Button buttonClass="primary" onClick={this.handleAddToCart}>Add to Cart</Button>
-                            <Button buttonClass="primary-outline">Add to Wishlist</Button>
+                            <Button buttonClass="default" onClick={this.handleAddToCart}>Add to Cart</Button>
+                            <Button buttonClass="default--outline">Add to Wishlist</Button>
                         </div>
                     </div>
                 </div>
