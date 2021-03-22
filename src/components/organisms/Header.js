@@ -1,14 +1,23 @@
+// ==========================================================================
+// Header Component
+// ==========================================================================
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Icons
 import { ReactComponent as ShoppingBagIcon } from '../../assets/icons/shopping-bag.svg';
 import { ReactComponent as UserIcon } from '../../assets/icons/user.svg';
 import { ReactComponent as LocationIcon } from '../../assets/icons/location.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 
+// Header Class
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleMenuStatus = this.handleMenuStatus.bind(this);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
+
         this.state = {
             mainMenu: [],
             menuVisible: false,
@@ -28,7 +37,6 @@ export default class Header extends React.Component {
         }
     }
 
-
     handleMenuClick = (event, menu) => {
         event.preventDefault();
 
@@ -44,7 +52,7 @@ export default class Header extends React.Component {
         }
 
         const megaMenus = document.querySelectorAll('header__mega-menu');
-        megaMenus.forEach(menu => {
+        megaMenus && megaMenus.forEach(menu => {
             if (menu.classList.contains('show') && menu !== megaMenu) {
                 this.setState({
                     menuVisible: ''
@@ -68,7 +76,7 @@ export default class Header extends React.Component {
 
                     {/* Header - Primary */}
                     <div className={`${this.props.prefix}__primary`}>
-                        <div className={`${this.props.prefix}__toggle`} data-menu-open={this.state.menuStatus} onClick={() => this.handleMenuStatus}>
+                        <div className={`${this.props.prefix}__toggle`} data-menu-open={this.state.menuStatus} onClick={this.handleMenuStatus}>
                             <MenuIcon />
                         </div>
                         <nav className={`${this.props.prefix}__nav`} data-menu-open={this.state.menuStatus}>

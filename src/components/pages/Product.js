@@ -8,6 +8,7 @@ import ProductPrimary from '../templates/ProductPrimary';
 
 
 const Product = (props) => {
+    const [notFound, setNotFound] = useState(false);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [product, setProduct] = useState([]);
@@ -19,7 +20,14 @@ const Product = (props) => {
     // similar to componentDidMount()
     useEffect(() => {
         fetch(`http://localhost:4000/products/${productId}`)
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 200) {
+                    return res.json()
+                } else {
+                    setNotFound(true);
+                    setIsLoaded(false);
+                }
+            })
             .then(
                 (result) => {
                     setProduct(result);
@@ -35,11 +43,22 @@ const Product = (props) => {
             )
     }, [productId]);
 
-
-    if (error) {
-        return <div>Error: {error.message}</div>
+    if (notFound) {
+        return (
+            <div>
+                <div className="container">
+                    <h1>Product Not Found</h1>
+                </div>
+            </div>
+        )
+    } else if (error) {
+        return (
+            <div>Error: {error.message}</div>
+        )
     } else if (!isLoaded) {
-        return <div>Loading...</div>
+        return (
+            <div>Loading...</div>
+        )
     } else {
         return (
             <div>

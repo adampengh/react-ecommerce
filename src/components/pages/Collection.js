@@ -5,6 +5,7 @@ import PageTitle from '../atoms/PageTitle';
 
 // Molecules
 import Breadcrumbs from '../molecules/Breadcrumbs';
+import Modal from '../molecules/Modal';
 
 // Organisms
 import ProductGrid from '../organisms/ProductGrid';
@@ -49,6 +50,7 @@ const Collection = (props) => {
                 <Breadcrumbs topLevel={topLevel} category={category}></Breadcrumbs>
                 <PageTitle title={category}></PageTitle>
                 <ProductGrid products={products}></ProductGrid>
+                <Modal></Modal>
             </main>
         )
     }

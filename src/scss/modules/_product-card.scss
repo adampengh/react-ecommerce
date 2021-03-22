@@ -4,6 +4,7 @@
     margin: 0;
     padding: 12px;
     padding-bottom: 48px;
+    transition: all 0.3s ease;
     &:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     }

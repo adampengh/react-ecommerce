@@ -1,6 +1,6 @@
 const Container = (props) => {
     return(
-        <div className="container">
+        <div className="container" {...props}>
             {props.children}
         </div>
     );
@@ -8,7 +8,7 @@ const Container = (props) => {
 
 const Row = (props) => {
     return(
-        <div className="row">
+        <div className="row" {...props}>
             {props.children}
         </div>
     )
