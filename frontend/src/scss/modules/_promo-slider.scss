@@ -1,0 +1,36 @@
+.promo-slider {
+    display: flex;
+    background: $off-white;
+    min-height: 36px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    &__inner {
+        max-width: 500px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+    }
+
+    .slick-arrow {
+        width: 24px;
+        height: 24px;
+        &::before {
+            display: none;
+            color: $mako;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .slick-prev {
+        left: -32px;
+    }
+    .slick-next {
+        right: -32px;
+    }
+}

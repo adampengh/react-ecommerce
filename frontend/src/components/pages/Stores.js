@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import PageTitle from '../atoms/PageTitle';
 
@@ -11,11 +12,9 @@ const Stores = () => {
     // this useEffect will run once
     // similar to componentDidMount()
     useEffect(() => {
-        fetch("http://localhost:4000/locations")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setLocations(result);
+        axios.get('http://localhost:5000/locations')
+            .then(response => {
+                    setLocations(response.data);
                     setLoaded(true);
                 },
                 // Note: it's important to handle errors here

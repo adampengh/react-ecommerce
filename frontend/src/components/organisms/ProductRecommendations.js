@@ -22,7 +22,13 @@ export default class ProductRecommendations extends React.Component {
             }))
     }
 
+
     render() {
+
+        if (!this.state.products.length) {
+            return null;
+        }
+
         const settings = {
             autoplay: false,
             initialSlide: 0,

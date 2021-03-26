@@ -7,10 +7,10 @@ const PriceGroup = (props) => {
 
     return (
         <div className={`${className ? `${className}__price ` : ''}${prefix}__price`}>
-            {props.showDiscount && product.price.salePrice &&
+            {props.showDiscount && product?.price?.salePrice &&
                 <span className={`${prefix}__price--discount`}>({Currency.percentDiscount(product.price.regPrice, product.price.salePrice)} off)</span>
             }
-            {product.price.salePrice &&
+            {product?.price?.salePrice &&
                 <span className={`${prefix}__price--sale fw-bold`}>{Currency.formatCurrency(product.price.salePrice)}</span>
             }
             <span className={`${prefix}__price--reg ${product.price.salePrice ? 'line-through' : 'fw-bold'}`}>{Currency.formatCurrency(product.price.regPrice)}</span>

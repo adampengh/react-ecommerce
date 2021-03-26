@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -16,10 +17,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "client": "HTTPS=true react-scripts start",
+    "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 4000",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },

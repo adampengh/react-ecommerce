@@ -1,0 +1,108 @@
+.modal {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+
+    &__overlay {
+        background: rgba($black, .8);
+        display: block;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1051;
+    }
+
+    &__content {
+        background: $white;
+        box-shadow: 0 0 8px 4px rgba($black, 0.8);
+        display: block;
+        height: 100%;
+        left: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 1052;
+        @media screen and (min-width: $breakpoint-lg) {
+            max-height: 80vh;
+            width: 960px;
+        }
+    }
+
+    &__inner {
+        display: block;
+        height: 100%;
+        left: 50%;
+        overflow: auto;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 1052;
+        @media screen and (min-width: $breakpoint-lg) {
+            max-height: 80vh;
+            width: 960px;
+        }
+    }
+
+
+    // ==========================================================================
+    // Close Btn
+    // ==========================================================================
+    &__close-btn {
+        align-items: center;
+        background: $white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        transition: all .5s ease;
+        width: 48px;
+        z-index: 1053;
+        &:hover {
+            background: $iron;
+            svg {
+                fill: $black;
+            }
+        }
+
+        svg {
+            transition: all .5s ease;
+        }
+    }
+
+
+    // ==========================================================================
+    // Header
+    // ==========================================================================
+    &__header {
+        border-bottom: 1px solid $iron;
+        padding: 16px 24px;
+    }
+
+    // ==========================================================================
+    // Body
+    // ==========================================================================
+    &__body {
+        overflow: auto;
+        padding: 16px 24px;
+    }
+
+    // ==========================================================================
+    // Footer
+    // ==========================================================================
+    &__footer {
+        border-top: 1px solid $iron;
+        padding: 16px 24px;
+    }
+}

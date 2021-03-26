@@ -42,7 +42,7 @@ const RatingsStars = ({
                     }
                 })}
             </div>
-            <span className={`${prefix}__ratings-reviews`}>{reviews.ratings} Reviews</span>
+            <span className={`${prefix}__ratings-reviews`}>{reviews.totalReviews} Reviews</span>
         </div>
     )
 }

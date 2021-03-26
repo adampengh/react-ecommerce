@@ -17,13 +17,11 @@ export default class ProductPrimary extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cart: this.props.cart,
             product: this.props.product
         }
-        this.handleAddToCart = this.handleAddToCart.bind(this);
     }
 
-    handleAddToCart() {
+    handleAddToCart = () => {
         console.log('ADD TO CART', this.state.product);
         console.log('Cart', this.state.cart)
         // this.setState({
@@ -57,7 +55,7 @@ export default class ProductPrimary extends React.Component {
                         </div>
 
                         {/* Ratings */}
-                        {product.reviews.ratings &&
+                        {product?.reviews?.totalReviews &&
                             <RatingsStars prefix={prefix} reviews={product.reviews} />
                         }
 
@@ -65,9 +63,8 @@ export default class ProductPrimary extends React.Component {
                             className="product-primary"
                             product={product}
                             showDiscount />
-                        {product.promotion && <p className={`${prefix}__promotion`}>{product.promotion}</p>}
 
-                        <Swatches swatches={product.swatches} />
+                        { product.swatches && <Swatches swatches={product.swatches} /> }
 
                         <div className="product-primary__actions">
                             <Button buttonClass="default" onClick={this.handleAddToCart}>Add to Cart</Button>
