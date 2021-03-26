@@ -6,6 +6,7 @@ import Breadcrumbs from '../molecules/Breadcrumbs';
 // Template
 import ProductPrimary from '../templates/ProductPrimary';
 
+const products = require('../../db.json').products;
 
 const Product = (props) => {
     const [notFound, setNotFound] = useState(false);
@@ -19,28 +20,32 @@ const Product = (props) => {
     // this useEffect will run once
     // similar to componentDidMount()
     useEffect(() => {
-        fetch(`http://localhost:4000/products/${productId}`)
-            .then(res => {
-                if (res.status === 200) {
-                    return res.json()
-                } else {
-                    setNotFound(true);
-                    setIsLoaded(false);
-                }
-            })
-            .then(
-                (result) => {
-                    setProduct(result);
-                    setIsLoaded(true);
-                },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
-                (error) => {
-                    setError(error);
-                    setIsLoaded(true);
-                }
-            )
+        // fetch(`http://localhost:4000/products/${productId}`)
+        //     .then(res => {
+        //         if (res.status === 200) {
+        //             return res.json()
+        //         } else {
+        //             setNotFound(true);
+        //             setIsLoaded(false);
+        //         }
+        //     })
+        //     .then(
+        //         (result) => {
+        //             setProduct(result);
+        //             setIsLoaded(true);
+        //         },
+        //         // Note: it's important to handle errors here
+        //         // instead of a catch() block so that we don't swallow
+        //         // exceptions from actual bugs in components.
+        //         (error) => {
+        //             setError(error);
+        //             setIsLoaded(true);
+        //         }
+        //     )
+        const product = products.find(product => product.id === productId);
+        setProduct(product);
+        setIsLoaded(true);
+        setError(false);
     }, [productId]);
 
     if (notFound) {
