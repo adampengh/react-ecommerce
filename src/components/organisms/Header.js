@@ -10,6 +10,9 @@ import { ReactComponent as UserIcon } from '../../assets/icons/user.svg';
 import { ReactComponent as LocationIcon } from '../../assets/icons/location.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 
+const mainMenu = require('../../db.json').mainMenu;
+
+
 // Header Class
 export default class Header extends React.Component {
     constructor(props) {
@@ -26,15 +29,19 @@ export default class Header extends React.Component {
     }
 
     componentDidMount() {
-        if (!this.state.mainMenu.length) {
-            fetch(`http://localhost:4000/mainMenu`)
-                .then(res => res.json())
-                .then(result => {
-                    this.setState({
-                        mainMenu: result
-                    })
-                });
-        }
+        // if (!this.state.mainMenu.length) {
+        //     fetch(`http://localhost:4000/mainMenu`)
+        //         .then(res => res.json())
+        //         .then(result => {
+        //             this.setState({
+        //                 mainMenu: result
+        //             })
+        //         });
+        // }
+
+        this.setState({
+            mainMenu: mainMenu
+        })
     }
 
     handleMenuClick = (event, menu) => {

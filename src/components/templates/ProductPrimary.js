@@ -77,7 +77,7 @@ export default class ProductPrimary extends React.Component {
                 </div>
 
                 <div className={`${prefix}__bottom`}>
-                    <ProductRecommendations
+                    {/* <ProductRecommendations
                         params={`_sort=id&_order=asc&id_ne=${product.id}`}
                         title={"You May Also Like"} />
                     <ProductRecommendations
@@ -85,7 +85,7 @@ export default class ProductPrimary extends React.Component {
                         title={"Top Rated"} />
                     <ProductRecommendations
                         params={`_sort=salesRank&_order=asc&id_ne=${product.id}`}
-                        title={"Best Sellers"} />
+                        title={"Best Sellers"} /> */}
                 </div>
             </div>
         )
