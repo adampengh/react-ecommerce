@@ -52,7 +52,7 @@ const Collection = (props) => {
                 <Breadcrumbs topLevel={topLevel} category={category}></Breadcrumbs>
                 <PageTitle title={category}></PageTitle>
                 <ProductGrid products={products}></ProductGrid>
-                <Modal></Modal>
+                {/* <Modal></Modal> */}
             </main>
         )
     }

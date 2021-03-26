@@ -42,10 +42,15 @@ const Product = (props) => {
         //             setIsLoaded(true);
         //         }
         //     )
-        const product = products.find(product => product.id === productId);
-        setProduct(product);
-        setIsLoaded(true);
-        setError(false);
+        const product = products.find(product => String(product.id) === String(productId));
+        if (!product) {
+            setNotFound(true);
+            setIsLoaded(true);
+        } else {
+            setProduct(product);
+            setIsLoaded(true);
+            setError(false);
+        }
     }, [productId]);
 
     if (notFound) {
